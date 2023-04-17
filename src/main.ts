@@ -21,7 +21,9 @@ client.on('voiceStateUpdate', (oldState, newState) => {
             }
         } else if (oldState.channelId !== null && newState.channelId === null) {
             if (newState.member !== null) {
-                (channel as TextChannel).send(`**${newState.member.displayName}** さんが退出しました。`);
+                (channel as TextChannel).send(
+                    `**${newState.member.displayName}** さんが退出しました。`
+                );
                 return;
             }
         }
