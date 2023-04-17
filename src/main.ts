@@ -67,7 +67,7 @@ client.on('voiceStateUpdate', (oldState, newState) => {
         // console.log(`newState.channel?.members.size: ${newState.channel?.members.size}`)
         if (oldState.channel?.members.size === 0) {
             let channelName = oldState.channel?.name;
-            let body = `👋  ${channelName} から全員が離れました。`
+            let body = `👋  全員が ${channelName} から離れました。`
             textChannel.send(body).catch(console.error);
             console.log(`Sent message: \`${body}\``)
             displayNames[channelName] = [];
