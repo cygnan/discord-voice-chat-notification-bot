@@ -45,6 +45,10 @@ client.on('voiceStateUpdate', (oldState, newState) => {
                     // console.log(message.content);
                     // let body = message.content;
                     // if (!body.includes(displayName)) {
+
+                    // 途中から（voice chatに既に誰かいる場合に）プログラムを起動したときにエラーをはかないように。
+                    if (!displayNames[channelName]) return;
+
                     if (!displayNames[channelName].includes(displayName)) {
                         // let editedBody = body.replace(
                         //     ` が ${newState.channel?.name} に座りました。`,
