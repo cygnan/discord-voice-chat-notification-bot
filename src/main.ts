@@ -1,5 +1,10 @@
 import {Client, GatewayIntentBits, TextChannel} from "discord.js";
-const {token, channelId} = require('../config.json');
+require('dotenv').config();
+
+const channelId = process.env.channelId || '';
+if (channelId === '') new Error("channelId is undefined");
+const token = process.env.token || '';
+if (token === '') new Error("token is undefined");
 
 const client = new Client({
     intents: [
