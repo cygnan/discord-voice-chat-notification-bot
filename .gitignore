@@ -65,3 +65,8 @@ package-lock.json
 lib/
 
 /.idea/
+
+/config.json
+
+/dist/*.js
+/dist/*.js.map
