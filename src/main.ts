@@ -15,12 +15,12 @@ client.on('voiceStateUpdate', (oldState, newState) => {
 
         if (oldState.channelId === null && newState.channelId !== null) {
             if (oldState.member !== null) {
-                (channel as TextChannel).send(`**参加** ${oldState.member.user.tag}さんが入室しました。`);
+                (channel as TextChannel).send(`[**参加**] ${oldState.member.displayName} さんが入室しました。`);
                 return;
             }
         } else if (oldState.channelId !== null && newState.channelId === null) {
             if (newState.member !== null) {
-                (channel as TextChannel).send(`**退出** ${newState.member.user.tag}さんが退出しました。`);
+                (channel as TextChannel).send(`[**退出**] ${newState.member.displayName} さんが退出しました。`);
                 return;
             }
         }
