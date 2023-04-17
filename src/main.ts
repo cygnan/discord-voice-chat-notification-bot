@@ -20,14 +20,14 @@ client.on('voiceStateUpdate', (oldState, newState) => {
         if (oldState.channelId === null && newState.channelId !== null) {
             if (oldState.member !== null) {
                 (channel as TextChannel).send(
-                    `🤗 **${oldState.member.displayName}** が ${newState.channel?.name} に座りました。`
+                    `🤗  **${oldState.member.displayName}** が ${newState.channel?.name} に座りました。`
                 );
                 return;
             }
         } else if (oldState.channelId !== null && newState.channelId === null) {
             if (newState.member !== null) {
                 (channel as TextChannel).send(
-                    `👋 **${newState.member.displayName}** が ${oldState.channel?.name} から離れました。`
+                    `👋  **${newState.member.displayName}** が ${oldState.channel?.name} から離れました。`
                 );
                 return;
             }
