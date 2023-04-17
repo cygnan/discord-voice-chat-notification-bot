@@ -1,4 +1,3 @@
-// const { Client, Intents } = require('discord.js');
 import {Client, GatewayIntentBits, TextChannel} from "discord.js";
 const {token, channelId} = require('../config.json');
 
