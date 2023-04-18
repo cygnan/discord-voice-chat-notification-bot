@@ -14,10 +14,20 @@ const client = new Client({
 });
 
 // {
-//   'みんなの机': '<message id>',
-//   'サブの机': '<message id>'
+//   'みんなの机': '<id of bot message when a first person enters voice chat>',
+//   'サブの机': '<id of bot message when a first person enters voice chat>'
 // }
 let messageIds: { [name: string]: string } = {};
+
+// {
+//   'みんなの机': [
+//     'Bocchi',
+//     'Kita'
+//   ],
+//   'サブの机': [
+//     'Nizika'
+//   ]
+// }
 let displayNames: { [name: string]: string[] } = {};
 
 client.on('voiceStateUpdate', (oldState, newState) => {
