@@ -1,8 +1,8 @@
 {
   "name": "discord-voice-chat-notification-bot",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Discord bot to notify users voice chat status changes",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/main.js",

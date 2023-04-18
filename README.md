@@ -3,7 +3,7 @@
 A Discord bot to notify users voice chat
  status changes
 
-## Getting started
+### Getting started
 
 ```bash
 # Set up nvm if it's not installed
